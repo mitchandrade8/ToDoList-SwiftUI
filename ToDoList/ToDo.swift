@@ -1,13 +1,13 @@
 //
-//  ToDo.swift
+//  ToDosViewModel.swift
 //  ToDoList
 //  Created by John Gallaugher on 10/9/22
 //  YouTube: YouTube.com/profgallaugher, Twitter: @gallaugher
 
 import Foundation
+import SwiftData
 
-struct ToDo: Identifiable, Codable {
-    var id: String?
+class ToDo: ObservableObject {
     var item = ""
     var reminderIsOn = false
     var dueDate = Date.now + (60*60*24)
